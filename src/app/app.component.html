@@ -1,0 +1,64 @@
+<div *ngIf="auth.user" >
+
+</div>
+
+
+<!--
+<h1>Angular OnFire🔥</h1>
+
+<div *ngIf="!auth.user">
+  <form>
+    <fieldset>
+      <legend>Login</legend>
+      <div>Email</div>
+      <input type="text" name="email" [(ngModel)]="email" />
+      <div>Senha</div>
+      <input type="password" name="password" [(ngModel)]="password" />
+      <hr />
+      <button (click)="auth.emailSignin(this.email, this.password)">
+        Login with e-mail
+      </button>
+      |
+      <button (click)="auth.googleSignin()">Login with Google</button>
+    </fieldset>
+  </form>
+</div>
+
+<div *ngIf="auth.error" style="color: red">
+  {{ auth.error }}
+</div>
+
+<div *ngIf="auth.user">
+  Logged as <b>{{ auth.user.email }}</b> |
+  <button (click)="auth.signOut()">Exit</button>
+  <hr />
+
+  <h2>Firebase list</h2>
+  <hr />
+  <div>Name:</div>
+  <div><input [(ngModel)]="formNewName" /></div>
+  <div>Age:</div>
+  <div><input type="number" [(ngModel)]="formNewAge" /></div>
+  <br />
+  <button (click)="addItem()">Adicionar</button>
+  <hr />
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Email</th>
+      <th>Commmand</th>
+    </tr>
+    <tr *ngFor="let item of list | async">
+      <td [title]="['chave: ' + item.key]">{{ item.name }}</td>
+      <td>{{ item.age }}</td>
+      <td>{{ item.email }}</td>
+      <td>
+        <button (click)="deleteItem(item.key)">Remove</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+-->
+<router-outlet></router-outlet>

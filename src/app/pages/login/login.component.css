@@ -1,0 +1,42 @@
+.container{
+    
+    display: flex;
+    justify-content: center;
+}
+.container .logoChefMaker{
+   margin-top: 20vh;
+}
+
+.caixaTexto{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.caixaTexto input{ 
+    background-color: white;
+    padding: 1rem;
+    padding-left: 1rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    border-color: white;
+    border-style: none;
+    margin-top: 1.5rem;
+}
+.caixaTexto button{ 
+    background-color: white;
+    padding: 0.75rem;
+    padding-left: 1rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    border-color: white;
+    color: #F22222;
+    font-size: 1rem;
+    font-weight: bolder;
+    border-style: none;
+    margin-top: 1.5rem;
+}

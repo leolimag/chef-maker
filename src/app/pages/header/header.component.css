@@ -1,0 +1,12 @@
+.logo img {
+    height: 28px;   
+}
+
+header {
+    padding: 18px;
+}
+
+.header-content {
+    display: flex;
+}
+

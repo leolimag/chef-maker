@@ -12,6 +12,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AuthService } from './auth.service';
 import { LoginComponent } from './pages/login/login.component';
+import { HeaderComponent } from './pages/header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { LoginComponent } from './pages/login/login.component';
     RegisterComponent,
     PostComponent,
     LoginComponent,
+    HeaderComponent,
 
 
   ],

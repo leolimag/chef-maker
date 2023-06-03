@@ -1,1 +1,23 @@
-<p>post works!</p>
+<app-header></app-header>
+<div>
+    <h1>Nova receita</h1>
+</div>
+<div class="file-input">
+    <input type="file" [(ngModel)]="post.imagem" accept="image/*" id="imgFile" (change)="exibirAlert()" required>
+    <img src="/assets/images/camera.png" id="camera" alt="câmera" (click)="clickInputFile()">
+</div>
+<div>
+    <input class="titulo" type="text" [(ngModel)]="post.titulo" placeholder="Qual o nome da sua receita?">
+</div>
+<h3>Ingredientes</h3>
+<div>
+    <textarea name="" id="" cols="51" rows="10" [(ngModel)]="post.ingredientes" placeholder="Quais são os ingredientes necessários?"></textarea>
+</div>
+<h3>Modo de Preparo</h3>
+<div>
+    <textarea name="" id="" cols="51" rows="10" [(ngModel)]="post.modoDePreparo" placeholder="Como é feita a receita?"></textarea>
+</div>
+<div class="buttonAll">
+    <button class="but-post" (click)="createPost()">Enviar</button>
+    <button class="but-cancel" (click)="backToHome()">Cancelar</button>
+</div>

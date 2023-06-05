@@ -1,29 +1,32 @@
-<div class="container">
-    <img class="logoChefMaker" src="/assets/images/logo_NT.png" alt="Logo Chefmaker">
-</div>
-<div>
-    <div *ngIf="!auth.user">
-        <form>
-            <div class="caixaTexto">
-                <input type="text" placeholder="Digite seu email:" name="email" [(ngModel)]="email" />
-                <input type="password" placeholder="Digite sua senha:" name="password" [(ngModel)]="password" />
-                <button (click)="auth.emailSignin(this.email, this.password)">
-                    Enviar
-                </button>
-                <button id (click)="auth.googleSignin()">Entrar com Google</button>
-            </div>
-          
 
-        </form>
+    <div class="container">
+        <img class="logoChefMaker" src="/assets/images/logo_NT.png" alt="Logo Chefmaker">
     </div>
+    <div>
+        <div *ngIf="!auth.user">
+            <form>
+                <div class="caixaTexto">
+                    <input type="text" placeholder="Digite seu email:" name="email" [(ngModel)]="email" />
+                    <input type="password" placeholder="Digite sua senha:" name="password" [(ngModel)]="password" />
+                    <button (click)="auth.emailSignin(this.email, this.password)">
+                        Enviar
+                    </button>
+                    <button id (click)="auth.googleSignin()">Entrar com Google</button>
+                </div>
 
-    <div *ngIf="auth.error" style="color: rgb(247, 247, 247)">
-        {{ auth.error }}
-    </div>
 
-    <div *ngIf="auth.user">
-        Logged as <b>{{ auth.user.email }}</b> |
-        <button (click)="auth.signOut()">Exit</button>
-        <hr />
-        {{loginAprovado()}}
-    </div>
+            </form>
+        </div>
+
+        <div *ngIf="auth.error" style="color: rgb(247, 247, 247)">
+            {{ auth.error }}
+        </div>
+
+        <div *ngIf="auth.user">
+            Logged as <b>{{ auth.user.email }}</b> |
+            <button (click)="auth.signOut()">Exit</button>
+            <hr />
+            {{loginAprovado()}}
+        </div>
+
+

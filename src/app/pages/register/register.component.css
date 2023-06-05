@@ -1,0 +1,8 @@
+.container{
+    
+    display: flex;
+    justify-content: center;
+}
+.container .logoChefMaker{
+   margin-top: 20vh;
+}

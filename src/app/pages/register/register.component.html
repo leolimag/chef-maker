@@ -1,1 +1,31 @@
-<p>register works!</p>
+<div class="container">
+    <img class="logoChefMaker" src="/assets/images/logo_NT.png" alt="Logo Chefmaker">
+</div>
+
+<div>
+  
+    <div class="caixaTexto">
+        <h2>Registrar-se</h2>
+        <div>
+            <input type="email" placeholder="Digite seu email:" [(ngModel)]="email" required>
+        </div>
+        <div>
+
+            <input type="password" placeholder="Digite sua senha:" [(ngModel)]="password" required>
+        </div>
+        <div>
+
+            <input type="password" placeholder="Confirme sua senha:" [(ngModel)]="confirmarPass" required>
+        </div>
+        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+        <div class="registrarBotao" *ngIf="email && password && password === confirmarPass"> 
+            <button id="register" (click)="register()">Registrar</button>
+         </div>
+
+        
+
+        
+    </div>
+    
+</div>

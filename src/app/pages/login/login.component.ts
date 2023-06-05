@@ -27,6 +27,10 @@ export class LoginComponent implements OnInit, OnDestroy{
   {
     this.router.navigate(['/home'])
   }
+  irParaRegistrar()
+  {
+    this.router.navigate(['/register'])
+  }
 
 
   ngOnInit() {

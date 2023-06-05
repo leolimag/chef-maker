@@ -1,11 +1,19 @@
 <app-header></app-header>
-<br>
-<br>
-<br>
-<button (click)="getPosts()"> Clique </button>
-<br>
-<br>
-<button (click)="goToPost()"> POST </button>
-<br>
-<br>
-<button (click)="getPosts()"> MOSTRAR </button>
+<div *ngIf="auth.user">
+    <br>
+    <br>
+    <br>
+    <p>{{auth.user.email}}</p>
+    <button (click)="getPosts()"> Clique </button>
+    <br>
+    <br>
+    <button (click)="goToPost()"> POST </button>
+    <br>
+    <br>
+    <button (click)="getPosts()"> MOSTRAR </button>
+</div>
+<div *ngIf="!auth.user" style="display: flex; flex-direction: column;align-items: center; font-family: 'Segoe UI';">
+    <h1>Sessão perdida!</h1>
+    <button (click)="voltarAoLogin()" style="margin-top: 1rem; background-color: #f22222; 
+    color: white; padding: 0.5rem; border-radius: 0.5rem; border: none;">Voltar ao login</button>
+</div>

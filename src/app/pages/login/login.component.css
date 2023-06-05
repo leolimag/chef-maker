@@ -10,6 +10,14 @@
    margin-top: 20vh;
 }
 
+#register{
+    color: white;
+    width: 50%;
+    align-self: center;
+    background: none;
+    text-decoration: underline;
+
+}
 .caixaTexto{
   
     display: flex;

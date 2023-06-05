@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { DatabaseService } from '../database/database.service';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { DatabaseService } from '../database/database.service';
 })
 export class HomeComponent {
 
-  constructor(private router: Router, private databaseService: DatabaseService){}
+  constructor(private router: Router, private databaseService: DatabaseService, public auth : AuthService){}
 
 
   getPosts(){
@@ -19,6 +20,10 @@ export class HomeComponent {
 
   goToPost(){
     this.router.navigate(['/post']);
+  }
+
+  voltarAoLogin(){
+    this.router.navigate(['/']);
   }
 
 }

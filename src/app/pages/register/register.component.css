@@ -6,3 +6,44 @@
 .container .logoChefMaker{
    margin-top: 20vh;
 }
+.caixaTexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.caixaTexto input{ 
+    background-color: white;
+    padding: 1rem;
+    padding-left: 1rem;
+    width: 17.5rem;
+    border-radius: 0.5rem;
+    border-color: white;
+    border-style: none;
+    margin-top: 1.5rem;
+}
+
+.registrarBotao #register{
+   
+    background-color: white;
+    margin-top: 2rem;    
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    color: #f22222;
+    border: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+h2{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-self: center;
+    font-weight: bolder;
+    font-size: 1.75rem;
+}

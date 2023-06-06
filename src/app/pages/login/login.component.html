@@ -9,7 +9,7 @@
                     <input type="text" placeholder="Digite seu email:" name="email" [(ngModel)]="email" />
                     <input type="password" placeholder="Digite sua senha:" name="password" [(ngModel)]="password" />
                     <button (click)="auth.emailSignin(this.email, this.password)">
-                        Enviar
+                        Entrar
                     </button>
                     <button id (click)="auth.googleSignin()">Entrar com Google</button>
                     <button id="register" (click)="irParaRegistrar()" >Registrar</button>

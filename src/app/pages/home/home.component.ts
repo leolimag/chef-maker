@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { DatabaseService } from '../database/database.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -9,13 +10,8 @@ import { DatabaseService } from '../database/database.service';
 })
 export class HomeComponent {
 
-  constructor(private router: Router, private databaseService: DatabaseService){}
+  constructor(private router: Router){}
 
-
-  getPosts(){
-    console.log(this.databaseService.getPosts());
-    return this.databaseService.getPosts();
-  }
 
   goToPost(){
     this.router.navigate(['/post']);

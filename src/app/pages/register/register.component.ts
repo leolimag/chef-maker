@@ -16,11 +16,15 @@ export class RegisterComponent implements OnInit, OnDestroy {
   constructor(private authService: AuthService, private renderer: Renderer2) { }
 
   register() {
-    console.log("testeeeeeeeeeeadsfasdsa")
-    this.authService.registerWithEmail(this.email, this.password)
+    if (this.password.length >= 6){
+      this.authService.registerWithEmail(this.email, this.password)
       .catch(error => {
         this.errorMessage = error.message;
       });
+    } else {
+      alert("A senha deve ter no mínimo 6 caracteres!")
+    }
+
   }
 
   ngOnInit() {

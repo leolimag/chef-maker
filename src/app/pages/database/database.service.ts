@@ -11,16 +11,6 @@ export class DatabaseService {
   constructor(private db: AngularFireDatabase) { 
   }
 
-  getPosts(): Observable<any[]> {
-    return this.db.list('posts')
-      .snapshotChanges()
-      .pipe(
-        map(changes => {
-          return changes.map(c => console.log(c));
-        })
-      )
-  }
-
   addPost(post: Post) {
     this.db.list('posts').push(post);
   }
@@ -32,5 +22,6 @@ export class DatabaseService {
   deletePost(key: string) {
     this.db.list('posts').remove(key)
   }
+
 }
 

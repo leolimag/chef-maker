@@ -20,7 +20,7 @@
         </div>
 
         <div *ngIf="auth.error" style="color: rgb(247, 247, 247)">
-            {{ auth.error }}
+            <p style="display: flex; justify-content: center;">Email e/ou senha inválidos!</p>
         </div>
 
         <div *ngIf="auth.user">

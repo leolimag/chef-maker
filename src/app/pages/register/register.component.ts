@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
   confirmarPass = '' as string;
   errorMessage= '' as string;
 
-  constructor(private authService: AuthService, private renderer: Renderer2) { }
+  constructor(private authService: AuthService, private renderer: Renderer2, public route: Router) { }
 
   register() {
     if (this.password.length >= 6){
@@ -25,6 +26,10 @@ export class RegisterComponent implements OnInit, OnDestroy {
       alert("A senha deve ter no mínimo 6 caracteres!")
     }
 
+  }
+
+  voltarAoLogin(){
+    this.route.navigate(['/']);
   }
 
   ngOnInit() {

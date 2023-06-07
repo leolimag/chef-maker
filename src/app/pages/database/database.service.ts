@@ -11,6 +11,11 @@ export class DatabaseService {
   constructor(private db: AngularFireDatabase) { 
   }
 
+  getPosts()  {
+    let posts = this.db.list('posts').valueChanges();
+    return posts;
+  }
+
   addPost(post: Post) {
     this.db.list('posts').push(post);
   }
@@ -24,4 +29,3 @@ export class DatabaseService {
   }
 
 }
-

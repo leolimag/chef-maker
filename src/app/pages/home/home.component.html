@@ -1,19 +1,29 @@
 <app-header></app-header>
 <div *ngIf="auth.user">
-    <br>
-    <br>
-    <br>
-    <p>{{auth.user.email}}</p>
-    <button (click)="getPosts()"> Clique </button>
-    <br>    
-    <br>
-    <button (click)="goToPost()"> POST </button>
-    <br>
-    <br>
-    <button (click)="getPosts()"> MOSTRAR </button>
+    <div class="user">
+        <p>Usuário: {{auth.user.email}}</p>
+    </div>
+    
+    <button class="btn-post" (click)="goToPost()">Compartilhe uma receita</button>
+    
+    <div class="receita" *ngFor="let receita of receitas | async">
+        <h2 class="title">{{receita.titulo}}</h2>
+        <div class="sub-title"><p><strong>Ingredientes</strong></p></div>
+        <div class="content">
+            {{receita.ingredientes}}
+        </div>
+        <div class="sub-title"><p><strong>Modo de Preparo</strong></p></div>
+        <div class="content">
+            {{receita.modoDePreparo}}
+        </div>
+    </div>
 </div>
+
+
 <div *ngIf="!auth.user" style="display: flex; flex-direction: column;align-items: center; font-family: 'Segoe UI';">
     <h1>Sessão perdida!</h1>
     <button (click)="voltarAoLogin()" style="margin-top: 1rem; background-color: #f22222; 
     color: white; padding: 0.5rem; border-radius: 0.5rem; border: none;">Voltar ao login</button>
 </div>
+
+

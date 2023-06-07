@@ -23,14 +23,5 @@ export class PostComponent {
   backToHome(){
     this.router.navigate(['/home']);
   }
-
-  clickInputFile(){
-    var img = document.getElementById('imgFile');
-    img?.click()
-  }
-
-  exibirAlert(){
-    alert("Imagem inserida com sucesso!");
-  }
-
+  
 }

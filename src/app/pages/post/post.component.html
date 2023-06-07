@@ -2,10 +2,6 @@
 <div>
     <h1>Nova receita</h1>
 </div>
-<div class="file-input">
-    <input type="file" [(ngModel)]="post.imagem" accept="image/*" id="imgFile" (change)="exibirAlert()" required>
-    <img src="/assets/images/camera.png" id="camera" alt="câmera" (click)="clickInputFile()">
-</div>
 <div>
     <input class="titulo" type="text" [(ngModel)]="post.titulo" placeholder="Qual o nome da sua receita?">
 </div>

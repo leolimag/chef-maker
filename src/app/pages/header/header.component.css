@@ -1,4 +1,4 @@
-.logo img {
+img {
     height: 28px;   
 }
 
@@ -10,3 +10,15 @@ header {
     display: flex;
 }
 
+.div-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.out {
+    margin-top: 4px;
+    background-color: #F22222;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
